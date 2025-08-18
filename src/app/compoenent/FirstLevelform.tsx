@@ -5,9 +5,9 @@ import { useState } from "react";
 import { Usercookie } from "../action";
 
 export default function FirstLevelform({ shiftSlides }) {
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("vaibhav@123");
+  const [username, setUsername] = useState("vaibhav");
+  const [email, setEmail] = useState("vaibhav@gmail.com");
   const [message, setMessage] = useState({});
 
   async function handleSubmit(e) {
