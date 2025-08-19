@@ -1,21 +1,28 @@
-//@ts-nocheck
 "use client";
-import Image from "next/image";
+
 import { useContext } from "react";
-import { PageCountContext } from "../layout";
-export default function page() {
-  const { currentMovie } = useContext(PageCountContext);
+import { PageCountContext } from "@/app/compoenent/PageCountContext";
+
+export default function MoviePage() {
+  const context = useContext(PageCountContext);
+
+  if (!context) return <p>Loading...</p>; // context not ready
+
+  const { currentMovie } = context;
+
+  if (!currentMovie || !currentMovie.title) {
+    return <p>No movie selected</p>;
+  }
+
   const backdropUrl = `https://image.tmdb.org/t/p/original${currentMovie.backdrop_path}`;
   const posterUrl = `https://image.tmdb.org/t/p/w500${currentMovie.poster_path}`;
+
   return (
     <div
       className="relative w-full min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${backdropUrl})`,
-      }}
+      style={{ backgroundImage: `url(${backdropUrl})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen p-4 text-white max-w-6xl mx-auto">
         <div className="w-[300px] h-auto mb-6 md:mb-0 md:mr-8">
           <img
