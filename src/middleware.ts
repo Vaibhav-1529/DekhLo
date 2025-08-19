@@ -9,7 +9,7 @@ export default function middleware(req) {
 
   if (protectedPaths.includes(pathname)) {
     if (!user) {
-      return NextResponse.redirect(new URL("/login", req.url));
+      return NextResponse.redirect(new URL("https://dekh-4lm6rupsm-vaibhav-1529s-projects.vercel.app/login", req.url));
     }
   }
 
