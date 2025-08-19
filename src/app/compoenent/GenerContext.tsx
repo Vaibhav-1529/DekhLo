@@ -4,7 +4,7 @@ import HomeMovieCard from "./HomeMovieCard";
 import Link from "next/link";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import { useContext, useEffect, useState } from "react";
-import { PageCountContext } from "../(groupresult)/layout";
+import { PageCountContext } from "./PageCountContext";
 export default function GenerContext({ id, name }) {
     const { currentPage } = useContext(PageCountContext);
   const [rowdata, setRowdata] = useState([]);

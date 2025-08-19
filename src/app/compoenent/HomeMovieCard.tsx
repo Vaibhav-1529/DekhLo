@@ -1,7 +1,7 @@
 //@ts-nocheck
 "use client"
 import { useRouter } from "next/navigation";
-import { PageCountContext } from "../(groupresult)/layout";
+import { PageCountContext } from "./PageCountContext";
 import { useContext } from "react";
 
 export default function HomeMovieCard({ movie }) {

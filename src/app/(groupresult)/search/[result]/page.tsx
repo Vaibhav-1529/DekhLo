@@ -4,7 +4,7 @@ import SearchNav from "@/app/compoenent/Navbar";
 import HomeMovieCard from "@/app/compoenent/HomeMovieCard";
 import { useSearchParams, useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { PageCountContext } from "../../layout";
+import { PageCountContext } from "@/app/compoenent/PageCountContext";
 
 export default function Page() {
   const { currentPage,setCurrentPage } = useContext(PageCountContext);

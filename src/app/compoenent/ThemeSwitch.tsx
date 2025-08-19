@@ -1,7 +1,7 @@
 //@ts-nocheck
 import React from 'react'
 import { Switch } from '@radix-ui/themes'
-import { ThemeContext } from '../layout'
+import { ThemeContext } from './ThemeContext'
 import { useContext } from 'react'
 export default function ThemeSwitch() {
     const {appearance,setAppearance}=useContext(ThemeContext)
